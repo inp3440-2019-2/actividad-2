@@ -1,2 +1,3 @@
-# actividad-2
+# Actividad 2
+
 Solución Actividad 2
