@@ -1,0 +1,123 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  color: #5D5D5F;
+  background-color: white;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #5D5D5F;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #5D5D5F;
+  text-transform: uppercase;
+}
+
+.logo h3 {
+  margin: 0; 
+}
+
+.logo i {
+  font-size: 2em;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li {
+  padding-right: 10px;
+}
+
+.header ul li i {
+  border: 2px solid #5D5D5F;
+  font-size: 1em;
+}
+
+.header ul li:last-child {
+  padding: 0 0 0 10px;
+}
+
+.header ul li:last-child i {
+  font-size: 2em;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+footer .logo {
+  color: white;
+  justify-content: center;
+  padding: 30px 0;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer ul li {
+  width: 33.33%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 501px) {
+}
+
+@media screen and (min-width: 961px) {
+  footer .footer-content {
+    display: flex;
+    padding-top: 30px;
+  }
+
+  footer .footer-content .logo {
+    width: 20%;
+    align-items: flex-start;
+  }
+
+  footer .footer-content ul {
+    width: 80%;
+  }
+}
