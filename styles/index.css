@@ -96,7 +96,7 @@ ul {
 }
 
 .main-article h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   margin: 0 0 10px;
 }
 
@@ -126,15 +126,19 @@ ul {
 .secondary-article a {
   text-decoration: none;
   color: #5D5D5F;
-  display: flex; /* PERHAPS ALWAYS COLUMN AND ROW ONLY ON HOMEPAGE SECONDARY CONTAINER */
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary-container .secondary-article a {
+  flex-direction: row;
 }
 
 .secondary-article section {
-  background: white;
+  background-color: white;
   padding: 10px 10px 20px;
   display: flex;
   flex-direction: column;
-  flex: 1;  /* CHECK IF NECESSARY */
 }
 
 .secondary-article section h3 {
@@ -221,13 +225,149 @@ footer ul li a:hover {
   text-decoration: underline;
 }
 
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-container article {
+  padding: 20px 10px 10px;
+}
+
+.tag {
+  background-color: #006699;
+  padding: 5px 30px;
+}
+
+.title-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  position: relative;
+}
+
+.title-container h1 {
+  font-size: 3.5em;
+  padding: 10px;
+  margin: 0;
+}
+
+.title-container ul {
+  display: flex;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.title-container ul li {
+  margin-right: 5px;
+}
+
+.title-container ul li:last-child {
+  margin-right: 0;
+}
+
+.title-container time {
+  padding: 20px 50px;
+  background-color: black;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.simple-centered {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtitle-container h2 {
+  font-size: 2.0em;
+  padding: 60px 0;
+  margin: 0;
+}
+
+.subtitle-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.paragraph-container {
+  background-color: #006699;
+  margin-top: 20px;
+  padding: 40px 30px;
+  color: white;
+  line-height: 1.5;
+  font-size: 1.2em;
+}
+
+.paragraph-container p {
+  margin-top: 0;
+  text-align: justify;
+}
+
+.paragraph-container img {
+  width: 100%;
+}
+
+.author {
+  padding: 30px 0;
+}
+
+.post-container aside {
+  flex: 1;
+}
+
+.aside-container .secondary-article section {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.aside-container .secondary-article section h3 {
+  margin: 10px 0 0;
+}
+
+.aside-container .secondary-article section .tag {
+  order: -1;
+  color: white;
+  text-align: center;
+  width: 30%;
+}
+
+.aside-container .secondary-article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
 @media screen and (min-width: 501px) {
+  .main-article h1 {
+    font-size: 3em;
+  }
+
   .secondary-article section {
     padding: 20px;
   }
 
   .tertiary-container .secondary-article {
     width: 50%;
+  }
+
+  .paragraph-container img {
+    width: 40%;
+    float: right;
+    margin: 10px 0 10px 10px;
+  }
+
+  .aside-container .secondary-article img {
+    height: 300px;
   }
 }
 
@@ -266,6 +406,19 @@ footer ul li a:hover {
 
   .tertiary-container .secondary-article {
     width: 33.33%;
+  }
+
+  .paragraph-container img {
+    width: 30%;
+    float: right;
+  }
+
+  .post-container > article {
+    width: 70%;
+  }
+
+  .aside-container .secondary-article img {
+    height: 200px;
   }
 
   footer .footer-content {
